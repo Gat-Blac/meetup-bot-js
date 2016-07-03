@@ -24,3 +24,11 @@ bot.onText(/\/textomenu$/, (msg, match)=>{
   let options = {'reply_markup':reply_markup}
   bot.sendMessage(fromId,'Como has digitado:' + text + ', te devuelvo un menu de opciones',options)
 })
+
+bot.onText(/\/imagen$/, (msg, match)=>{
+  const fromId = msg.from.id
+  let text = match[0]
+  let caption = 'Como has digitado:' + text + ', te devuelvo una imagen'
+  let options = {'caption':caption}
+  bot.sendPhoto(fromId, 'imagen.jpg', options)
+})
