@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Gat-Blac/meetup-bot-js",
   "dependencies": {
+    "mongoose": "^4.5.3",
     "node-telegram-bot-api": "^0.23.3"
   }
 }
