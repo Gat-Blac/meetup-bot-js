@@ -39,3 +39,18 @@ bot.onText(/\/url$/, (msg,match)=>{
   let text = '<a href="http://www.gat-blac.com">Visita nuestra pagina</a>\n<code>var hola = "Hola";</code>'
   bot.sendMessage(fromId,text,options)
 })
+
+bot.onText(/\/pregunta$/, (msg,match)=>{
+  const fromId = msg.from.id
+  let reply_markup = {'force_reply':true}
+  let options = {'reply_markup':reply_markup}
+  bot.sendMessage(fromId, '¿De que equipo eres?',options).then(function (sended) {
+    console.log(sended)
+    var chatId = sended.chat.id
+    var messageId = sended.message_id
+    bot.onReplyToMessage(chatId, messageId, function (message) {
+      console.log(message)
+      bot.sendMessage(fromId, 'Respondiste:' + message.text)
+    })
+  })
+})
