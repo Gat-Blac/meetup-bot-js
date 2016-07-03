@@ -32,3 +32,10 @@ bot.onText(/\/imagen$/, (msg, match)=>{
   let options = {'caption':caption}
   bot.sendPhoto(fromId, 'imagen.jpg', options)
 })
+
+bot.onText(/\/url$/, (msg,match)=>{
+  const fromId = msg.from.id
+  let options = {'parse_mode':'HTML'}
+  let text = '<a href="http://www.gat-blac.com">Visita nuestra pagina</a>\n<code>var hola = "Hola";</code>'
+  bot.sendMessage(fromId,text,options)
+})
