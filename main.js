@@ -54,3 +54,11 @@ bot.onText(/\/pregunta$/, (msg,match)=>{
     })
   })
 })
+
+bot.onText(/\/localizacion$/, (msg,match)=>{
+  const fromId = msg.from.id
+  let keyboard = [[{'text':'Enviar localización','request_location':true}]]
+  let reply_markup = {'keyboard':keyboard, 'resize_keyboard':true, 'one_time_keyboard': true, selective:true}
+  let options = {'reply_markup':reply_markup}
+  bot.sendMessage(fromId, 'Enviame tu localizacion',options)
+})
