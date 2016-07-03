@@ -1,0 +1,25 @@
+{
+  "name": "bot-meetup",
+  "version": "1.0.0",
+  "description": "Bot para meetup de javascript para el 7 de julio",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gat-Blac/meetup-bot-js.git"
+  },
+  "keywords": [
+    "meetup"
+  ],
+  "author": "Gat-Blac <contact@gat-blac.com> (http://gat-blac.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gat-Blac/meetup-bot-js/issues"
+  },
+  "homepage": "https://github.com/Gat-Blac/meetup-bot-js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.23.3"
+  }
+}
