@@ -10,6 +10,6 @@ let options = {'reply_markup':reply_markup}
 
 usuario.find({},(error,users)=>{
   for(var i=0;i < users.length;i++){
-    bot.sendMessage(users[i]._id, 'En las proximas elecciones si fueras vocal de mesa ¿Cual serias?')
+    bot.sendMessage(users[i]._id, 'En las proximas elecciones si fueras vocal de mesa ¿Cual serias?',options)
   }
 })
