@@ -62,3 +62,10 @@ bot.onText(/\/localizacion$/, (msg,match)=>{
   let options = {'reply_markup':reply_markup}
   bot.sendMessage(fromId, 'Enviame tu localizacion',options)
 })
+
+bot.onText(/\/suscribir$/, (msg,match)=>{
+  const fromId = msg.from.id
+  new usuario({'_id':fromId}).save((error,result)=>{
+    bot.sendMessage(fromId, 'Estas suscrito')
+  })
+})
