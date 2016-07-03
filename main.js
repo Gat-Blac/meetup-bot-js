@@ -1,6 +1,7 @@
 'use strict'
 var token = require('./token')
 var TelegramBot = require('node-telegram-bot-api')
+var usuario = require('./usuarios')
 
 var bot = new TelegramBot(token, {polling: true})
 
